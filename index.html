@@ -184,6 +184,104 @@ input[type=date]{font:inherit;color:var(--ink);background:var(--surface);border:
 .mailaddr{display:flex;justify-content:space-between;gap:8px;font-size:.76rem;color:var(--band-muted);user-select:all}
 .mailaddr .linkbtn{color:var(--hi);font-size:.76rem;user-select:none}
 .pbody .linkbtn{display:inline;text-align:left;color:var(--accent);font:inherit;font-size:.94rem}
+/* Infographics */
+.ig{margin:0;background:var(--surface);border:1px solid var(--line);border-top:4px solid var(--c);border-radius:var(--r);padding:clamp(16px,3vw,24px);display:grid;gap:14px;min-width:0;overflow:hidden}
+.ig figcaption{color:var(--c)}
+.ig-cap{font-family:var(--f-display);font-weight:700;font-size:1rem}
+.ig-foot{font-size:.88rem;color:var(--muted)}
+.ig b{font-family:var(--f-display)}
+.ig-stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(110px,1fr));gap:10px}
+.ig-stats div{display:grid;background:var(--surface-2);border-radius:10px;padding:12px 14px}
+.ig-stats b{font-size:2.2rem;line-height:1;color:var(--c)}
+.ig-stats span{font-size:.85rem;color:var(--muted)}
+.ig-bars{display:grid;gap:7px}
+.ig-bar{display:grid;grid-template-columns:minmax(90px,150px) 1fr 74px;gap:10px;align-items:center;font-size:.9rem}
+.ig-bar i{display:block;height:16px;border-radius:5px;background:var(--c);min-width:4px}
+.ig-bar em{font-style:normal;font-family:var(--f-mono);font-size:.8rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.ig-ladder{display:grid;gap:6px}
+.ig-ladder div{display:grid;gap:1px;background:color-mix(in srgb,var(--c) 10%,var(--surface));border-left:4px solid var(--c);border-radius:6px;padding:8px 12px}
+.ig-ladder span{font-size:.88rem;color:var(--muted)}
+.ig-cards,.ig-tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.ig-cards div,.ig-tiles div{position:relative;display:grid;gap:3px;align-content:start;background:var(--surface-2);border-radius:10px;padding:12px 14px}
+.ig-cards em{font-style:normal;font-family:var(--f-display);font-weight:800;font-size:1.5rem;line-height:1;color:var(--c)}
+.ig-cards span,.ig-tiles span{font-size:.87rem;color:var(--muted);line-height:1.35}
+.ig-tiles div{border-top:3px solid var(--c)}
+.ig-dodont{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.ig-dodont>div{border-radius:10px;padding:12px 14px;display:grid;gap:5px;align-content:start;font-size:.92rem}
+.ig-dodont .do{background:var(--ok-bg)} .ig-dodont .dont{background:var(--bad-bg)}
+.ig-dodont .do b{color:var(--ok)} .ig-dodont .dont b{color:var(--bad)}
+.ig-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(var(--cols),minmax(0,1fr));gap:10px;counter-reset:s}
+.ig-flow li{position:relative;display:grid;gap:2px;align-content:start;background:var(--surface-2);border-radius:10px;padding:12px}
+.ig-flow li.rowend::after{display:none}
+.ig-flow li:not(:last-child):not(.rowend)::after{content:"→";position:absolute;right:-10px;top:12px;color:var(--c);font-weight:700;z-index:1}
+.ig-flow em{font-style:normal;display:grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--c);color:var(--on-c);font-family:var(--f-display);font-weight:800;margin-bottom:4px}
+.ig-flow span{font-size:.84rem;color:var(--muted);line-height:1.3}
+.ig-flow.big li{padding:16px}.ig-flow.big b{font-size:1.25rem}.ig-flow.big em{width:36px;height:36px;font-size:1.1rem}
+.ig-chain{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.ig-chain div{display:grid;gap:2px;background:var(--surface-2);border:2px solid var(--c);border-radius:10px;padding:10px 12px;min-width:96px}
+.ig-chain span{font-size:.8rem;color:var(--muted)}
+.ig-chain i{font-style:normal;color:var(--c);font-weight:800}
+.ig-term .d{display:block;color:#8FA3C0;margin:0 0 8px 2ch}
+.ig-check{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.ig-check>div{display:grid;gap:5px;align-content:start;background:var(--surface-2);border-radius:10px;padding:12px 14px}
+.ig-check p{display:grid;grid-template-columns:20px 1fr;font-size:.92rem}
+.ig-check p span{color:var(--c);font-weight:800}
+.ig-pairs{display:grid;gap:6px}
+.ig-pairs>div{display:grid;grid-template-columns:1fr 26px 1fr;gap:8px;align-items:center}
+.ig-pairs .hd span{font-family:var(--f-mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.ig-pairs .a{background:var(--bad-bg);border-radius:8px;padding:8px 10px;font-size:.92rem}
+.ig-pairs .b{background:var(--ok-bg);border-radius:8px;padding:8px 10px;font-size:.92rem}
+.ig-pairs i{font-style:normal;text-align:center;color:var(--c);font-weight:800}
+.ig-tiers{display:grid;grid-template-columns:1fr auto;gap:14px;align-items:center}
+.stack-t{display:grid;gap:5px;justify-items:center}
+.stack-t div{display:grid;justify-items:center;text-align:center;background:color-mix(in srgb,var(--c) 18%,var(--surface));border-radius:8px;padding:8px}
+.stack-t div:first-child{background:var(--c);color:var(--on-c)} .stack-t div:first-child span{color:var(--on-c)}
+.stack-t span{font-size:.84rem;color:var(--muted)}
+.ig-side{max-width:16ch;font-size:.88rem;color:var(--muted);border-left:3px solid var(--c);padding-left:10px}
+.ig-compare{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px}
+.ig-compare>div{display:grid;gap:4px;align-content:start;background:var(--surface-2);border-radius:10px;padding:14px;border-top:4px solid var(--c)}
+.ig-compare b{font-size:1.08rem}
+.ig-compare em{font-style:normal;font-size:.86rem;color:var(--c);font-weight:600}
+.ig-compare p{font-size:.88rem;color:var(--muted);padding-left:12px;position:relative}
+.ig-compare p::before{content:"•";position:absolute;left:0;color:var(--c)}
+.ig-cycle{position:relative;width:min(100%,360px);aspect-ratio:1;margin:0 auto}
+.ig-cycle svg{position:absolute;inset:0;width:100%;height:100%}
+.ig-cycle circle{fill:none;stroke:var(--c);stroke-width:1.2;stroke-dasharray:3 2;opacity:.6}
+.ig-cycle path{stroke:var(--c);stroke-width:1.2;fill:none}
+.ig-cycle>div{position:absolute;transform:translate(-50%,-50%);background:var(--surface);border:2px solid var(--c);border-radius:999px;padding:6px 12px;font-size:.85rem;font-weight:600;white-space:nowrap;display:flex;gap:6px;align-items:center;z-index:1}
+.ig-cycle>div em{font-style:normal;color:var(--c);font-family:var(--f-display);font-weight:800}
+.ig-cycle .hub{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);text-align:center;font-family:var(--f-display);font-weight:700;color:var(--muted)}
+.ig-record{max-width:420px;border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.ig-record .hd{background:var(--c);color:var(--on-c);font-weight:700;padding:8px 12px;font-size:.9rem}
+.ig-record>div:not(.hd){display:grid;grid-template-columns:120px 1fr;padding:7px 12px;border-top:1px solid var(--line);font-size:.92rem}
+.ig-record span{color:var(--muted);font-family:var(--f-mono);font-size:.78rem}
+.ig-ip{display:grid;gap:10px}
+.row-ip{display:flex;gap:4px;align-items:end;font-family:var(--f-mono)}
+.row-ip div{display:grid;justify-items:center;min-width:64px;padding:8px;border-radius:8px}
+.row-ip b{font-family:var(--f-mono);font-size:1.6rem}
+.row-ip span{font-size:.7rem;text-transform:uppercase;letter-spacing:.06em}
+.row-ip .net{background:color-mix(in srgb,var(--c) 18%,var(--surface))} .row-ip .host{background:var(--hi);color:#182036}
+.row-ip i{font-style:normal;font-size:1.6rem;font-weight:700;padding-bottom:18px}
+.row-ip.mask div{background:var(--surface-2)} .row-ip.mask b{font-size:1.1rem;color:var(--muted)} .row-ip.mask i{font-size:1.1rem;padding-bottom:6px}
+.ig-ipnotes{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:6px;font-size:.9rem}
+.ig-ipnotes u{text-decoration:none;background:var(--hi);color:#182036;padding:0 3px;border-radius:3px}
+.ig-cvss .scale{display:flex;border-radius:10px;overflow:hidden}
+.ig-cvss .scale div{display:grid;padding:10px 8px;color:#fff;min-width:0}
+.ig-cvss .scale b{font-size:.95rem}.ig-cvss .scale span{font-family:var(--f-mono);font-size:.72rem}
+.ig-backup{display:grid;gap:8px;overflow-x:auto}
+.bk-row{display:grid;grid-template-columns:100px repeat(5,minmax(40px,1fr)) minmax(160px,1.6fr);gap:6px;align-items:end;min-width:560px}
+.bk-row.hd span{font-family:var(--f-mono);font-size:.72rem;color:var(--muted);text-align:center}
+.bk{position:relative;height:56px;display:grid;align-items:end;justify-items:center;font-family:var(--f-mono);font-size:.75rem;font-weight:600}
+.bk i{position:absolute;bottom:0;left:15%;right:15%;height:var(--h);border-radius:4px 4px 0 0}
+.bk.F i{background:var(--c)} .bk.I i{background:var(--u305)} .bk.D i{background:var(--u313)}
+.bk{color:var(--on-c);z-index:0} .bk i{z-index:-1}
+.bk-row p{font-size:.85rem;color:var(--muted);align-self:center}
+.ig-apps{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px}
+.ig-apps div{display:grid;gap:2px;background:var(--surface-2);border-radius:8px;padding:9px 11px;font-size:.86rem}
+.ig-apps em{font-style:normal;font-family:var(--f-mono);font-size:.72rem;font-weight:600;color:var(--c)}
+.ig-apps .hot{background:var(--c);color:var(--on-c)} .ig-apps .hot em{color:var(--on-c)}
+@media (max-width:700px){.ig-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.ig-flow li::after{display:none!important}}
+@media (max-width:560px){.ig-tiers{grid-template-columns:1fr}.ig-side{max-width:none}.ig-bar{grid-template-columns:80px 1fr 60px}.row-ip div{min-width:48px}.row-ip b{font-size:1.2rem}}
 /* Home */
 .unitcard{border-left:4px solid var(--c);}
 .unitcard h3{font-size:1.02rem;margin-top:4px}
@@ -1641,6 +1739,98 @@ function viewPlan(){
   const t = $(".pday.today"); if(t) setTimeout(()=>t.scrollIntoView({block:"center"}), 50);
 }
 
+/* ---------- INFOGRAPHICS: one per notes topic ---------- */
+const IG = {
+"notes-exam-1": {type:"stats", stats:[["90","marks"],["90","min writing"],["15","min reading"],["≈1","min per mark"]],
+  bars:{title:"Share of marks by unit (delivery hours)", unit:"h", max:50, rows:[["310",50],["313",50],["305",40],["309",20],["312",20]]},
+  note:"Section A: 20 multiple choice (20 marks) · Section B: short and extended answer (70 marks)"},
+"notes-exam-2": {type:"ladder", caption:"How much to write: climb the ladder", rows:[["List / State","Name it. Nothing more."],["Identify","Point it out briefly."],["Outline","Brief summary."],["Describe","Detailed account of features."],["Explain","Reasons: how and why."],["Justify / Recommend","Choose, then defend with reasons for this case."],["Discuss / Analyse","More than one side, or break into parts."]]},
+"notes-exam-3": {type:"cards", cards:[["2 marks","= 2 points, or 1 point + a reason"],["Discuss (2)","1 point for each side"],["List + describe","Marked 1 + 1"],["Extra points","Read, but a contradiction can cost marks"],["Same idea twice","Only scores once"],["ICT terms","Use them precisely"]]},
+"notes-exam-4": {type:"dodont", do:["Find where the question sits in the timeline","Answer for this organisation and this person","Name the ethical principle and the harm","Write “written consent”","Name the exact hardware and change"],
+  dont:["Write “it’s illegal” for an ethics question","Repeat one idea in different words","Say “better” or “more efficient” alone","Give statements when asked for questions","Ignore the marks shown"]},
+"notes-exam-5": {type:"cards", numbered:true, cards:[["Common sense","Examiners aren’t trying to trick you"],["Small differences","Hub vs switch, copyright vs patent"],["Fit the case","Only this organisation"],["Best option","Not the first one you think of"],["Answer the question","The one that was asked"],["Daily revision","Beats weekly cramming"],["Teach it","Can you explain it simply?"]]},
+
+"notes-310-1": {type:"flow", steps:[["Requirements","Clarify client needs"],["Design","Diagram + materials"],["Costs","Vendor specs and prices"],["Sign-off","Client approves design"],["Install","Plan, approve, install"],["Test + secure","Fix problems, apply security"],["Handover","Document + final sign-off"]]},
+"notes-310-2": {type:"cards", cards:[["Users","How many people and devices?"],["Uses","Files, cloud, VoIP, video?"],["Budget","How much can be spent?"],["Layout","Where must devices go?"],["Connection","Wired, wireless, guest Wi-Fi?"],["Future","Security, backups, growth?"]]},
+"notes-310-3": {type:"chain", nodes:[["Internet",""],["Modem / NTD","encode + decode"],["Router","directs packets, DHCP"],["Firewall","filters by rules"],["Switch","frames to one port"],["Devices","PCs · WAP · NAS · printer"]]},
+"notes-310-4": {type:"bars", log:true, unit:"Gbps", caption:"Maximum speed (log scale)", rows:[["Cat 5e",1,"100 m"],["Cat 6",1,"10 Gbps ≤ 55 m"],["Cat 6a",10,"100 m"],["Fibre",10,"long distance"],["Wi-Fi 5",3.5,"theoretical"],["Wi-Fi 6",9.6,"theoretical"],["Wi-Fi 7",46,"theoretical"]]},
+"notes-310-5": {type:"ip"},
+"notes-310-6": {type:"tiles", tiles:[["TCP/IP","Addressing + delivery"],["HTTP/S","Web pages (S = secure)"],["DHCP","Hands out IPs"],["DNS","Name → IP"],["SMTP","Send email"],["IMAP / POP3","Read / download email"],["FTP / SFTP","File transfer"],["VoIP","Calls over data"]]},
+"notes-310-7": {type:"terminal", rows:[["ping 192.168.1.1","Reachable? Packet loss? Response time?"],["ipconfig /all","My IP, mask, gateway, DNS"],["tracert google.com","Each hop; where it breaks"],["nslookup site.com","Is DNS working?"],["netstat","Active connections"]]},
+"notes-310-8": {type:"checklist", groups:[["Router settings",["Change admin password","WPA3 / WPA2 (never WEP)","Change default SSID","Disable WPS + remote mgmt","Guest network, no LAN access","Firewall on, firmware updated"]],["Physical + people",["Locked comms cabinet","Swipe card access","Strong passwords + MFA","Phishing training"]]]},
+"notes-310-9": {type:"pairs", left:"Cause", right:"Fix", rows:[["Hub / 10-100 switch","Gigabit switch"],["Old Cat 5 cable","Cat 6 / 6a"],["One overloaded WAP","More WAPs / mesh"],["Shared files on slow link","Dedicated NAS, faster link"],["Router bandwidth limit","QoS, wire heavy users"]]},
+"notes-310-10": {type:"checklist", groups:[["Handover pack",["Network diagram + floor plan","IP address table","Configuration settings","Admin credentials (secure)","User guide + troubleshooting","Warranty + vendor details","Client sign-off"]]]},
+
+"notes-305-1": {type:"flow", steps:[["New problems","Check what’s logged"],["Previous logs","Similar issues + fixes"],["Investigate","Document the issue"],["Notify","Results + advice"],["Feedback","Make changes"]]},
+"notes-305-2": {type:"flow", steps:[["Confirm","Requirements"],["Solution","Investigate + document"],["Extras","Refer to client"],["Approval","Client says yes"],["Support level","Assess + agree"],["Schedule","Suits the client"],["Deliver","Training + manuals"]]},
+"notes-305-3": {type:"tiers", rows:[["Level 3","Experts, developers, vendor"],["Level 2","Technical specialists"],["Level 1","Help desk"],["Level 0","Self-help: FAQ, knowledge base"]], side:"Escalate ↑ when it can’t be fixed or the SLA time runs out"},
+"notes-305-4": {type:"cards", cards:[["Services","What’s covered"],["Response time","How fast they act"],["Resolution time","How fast it’s fixed"],["Uptime","Availability target"],["Responsibilities","Who does what"],["Penalties","If targets are missed"]], caption:"Inside a service level agreement"},
+"notes-305-5": {type:"compare", cols:[["Open question","“What happened before the error?”",["Invites detail","Good for diagnosing"]],["Closed question","“Is the printer on?”",["Yes/no or one fact","Good for confirming"]],["Active listening","Let them finish",["Paraphrase back","No jargon","Positive body language"]]]},
+"notes-305-6": {type:"compare", cols:[["5 half-days ✓","Recommended",["Easier to take in","Practise between sessions","Less work disruption"]],["1 full day ✗","Harder",["Too much at once","Follow-up needed","Absent staff miss it"]]]},
+"notes-305-7": {type:"cycle", steps:["Create form","Give instructions","Distribute","Review","Improve"]},
+
+"notes-309-1": {type:"flow", steps:[["Identify","Faulty equipment"],["Test",""],["Analyse","Results"],["Review","Past fault data"],["Plan","Repair / replace"],["Approve","Liaise + approval"],["Repair","Parts + WHS"],["Record","Update docs"]]},
+"notes-309-2": {type:"compare", cols:[["Preventative","Before a fault",["Scheduled","Cleaning, updates, toner"]],["Predictive","Before a fault, using data",["Monitoring","S.M.A.R.T. warnings"]],["Corrective","After a fault",["Reactive","Replace failed PSU"]]]},
+"notes-309-3": {type:"checklist", groups:[["Inside the case",["Shut down + unplug","Anti-static strap + mat","Hold parts by edges","Never open a PSU"]],["Moving equipment",["Clear the path","Check weight, team lift / trolley","Bend knees, don’t twist","Stable surface only"]],["Toner spill",["Power off","Gloves + glasses","Dry cloth, never vacuum"]]]},
+"notes-309-4": {type:"tiles", tiles:[["POST beeps","Hardware at start-up"],["Device Manager","Drivers + devices"],["Task Manager","CPU, RAM, disk"],["Event Viewer","Error logs"],["CHKDSK / SFC","Disk + system files"],["Memory Diagnostic","Faulty RAM"],["Multimeter","Voltage"],["Cable tester","Network cables"]]},
+"notes-309-5": {type:"cards", cards:[["Record","Every repair, fault and change"],["Warranty first","Don’t void it by opening"],["Recycle","Wipe data → accredited e-waste"],["Consumables","Paper, toner, print heads"],["Downtime","Loan devices or spare parts"],["After repair","Test, record, sign-off"]]},
+
+"notes-312-1": {type:"tiles", tiles:[["Accounts","Create, change, disable"],["Access control","Who can do what"],["Security policy","Enforce it"],["Licences","Register + compliance"],["Patches","Alerts + updates"],["Backups","Run, test, restore"]]},
+"notes-312-2": {type:"ladder", caption:"NTFS permission levels, least to most", rows:[["Read","Open and view"],["Write","Add new files"],["Modify","Change and delete"],["Full control","Everything, including permissions"]], foot:"Least privilege: give the lowest level that does the job. RBAC: give it to the role, not the person."},
+"notes-312-3": {type:"compare", cols:[["Something you know","Password, PIN",["Can be guessed or phished"]],["Something you have","Phone app, token",["Can be lost"]],["Something you are","Fingerprint, face",["Hard to copy"]]], foot:"MFA = two or more different factors"},
+"notes-312-4": {type:"record", title:"Security access register entry", fields:[["User ID","jsmith"],["Name","Jordan Smith"],["Role","Office"],["Access level","Finance share: Read"],["Granted","3 Feb"],["Approved by","IT manager"],["Revoked","—"]]},
+"notes-312-5": {type:"tiles", tiles:[["Perpetual","Pay once"],["Subscription","Ongoing, includes updates"],["Per user","Each person"],["Per device","Each machine"],["Site / volume","Many installs"],["Open source","Free to use + modify"]], foot:"Cost = price × users × months, e.g. $70 × 3 × 24 = $5040"},
+"notes-312-6": {type:"cvss"},
+"notes-312-7": {type:"backup"},
+"notes-312-8": {type:"flow", steps:[["Try other fixes","Restore is last resort"],["Approval","Senior ICT staff"],["Restore","Under supervision"],["Feedback","From personnel"],["Record","Process + issues"]]},
+
+"notes-313-1": {type:"compare", cols:[["Copyright","Code, text, images",["Automatic","Copyright Act 1968"]],["Patent","Inventions",["Apply to IP Australia","Patents Act 1990"]],["Trade mark","Logos, names",["Register, renew 10 yrs","Trade Marks Act 1995"]],["Design","Product appearance",["Register","Designs Act 2003"]]]},
+"notes-313-2": {type:"apps"},
+"notes-313-3": {type:"flow", big:true, steps:[["Contain","Stop it first"],["Assess","Serious harm likely?"],["Notify","OAIC + individuals"],["Review","Prevent repeats"]]},
+"notes-313-4": {type:"checklist", groups:[["Valid consent is",["Written + signed","Informed","Voluntary","Current + specific"]],["The form includes",["Name, signature, date","Who receives the data","What’s stored + how used","Where stored","Third parties","How to opt out","Privacy policy link"]]]},
+"notes-313-5": {type:"tiles", tiles:[["Utilitarian","Greatest good, greatest number"],["Deontological","Follow rules and duties"],["Virtue","Act with good character"],["Care","Relationships matter"],["Social contract","Agreements we make"],["Egoism","Own interest"]], foot:"ACS values: honesty · trustworthiness · respect"},
+"notes-313-6": {type:"cards", numbered:true, cards:[["Wellbeing","Human, society, environment"],["Human values","Rights + autonomy"],["Fairness","No unfair bias"],["Privacy","Protect data"],["Reliability","Safe + accurate"],["Transparency","People know it’s AI"],["Contestability","Can challenge it"],["Accountability","Humans responsible"]], caption:"Eight voluntary principles"},
+"notes-313-7": {type:"flow", steps:[["Identify","The incident"],["Report","Compliance officer / manager"],["Assess","Likelihood × consequence"],["Recommend","Training, policy, controls"]]}
+};
+
+function renderIG(id){
+  const g = IG[id]; if(!g) return "";
+  const E = esc, L = (s)=>`<div class="ig-cap">${E(s)}</div>`;
+  let h = "";
+  switch(g.type){
+    case "stats": h = `<div class="ig-stats">${g.stats.map(([n,l])=>`<div><b>${n}</b><span>${E(l)}</span></div>`).join("")}</div>
+      ${L(g.bars.title)}<div class="ig-bars">${g.bars.rows.map(([u,v])=>`<div class="ig-bar" ${uc(u)}><span>${UNITS[u].short}</span><i style="width:${100*v/g.bars.max}%"></i><em>${v}${g.bars.unit}</em></div>`).join("")}</div>
+      <p class="ig-foot">${E(g.note)}</p>`; break;
+    case "ladder": h = (g.caption?L(g.caption):"")+`<div class="ig-ladder">${g.rows.map(([a,b],i)=>`<div style="margin-left:${i*(60/g.rows.length)}%"><b>${E(a)}</b><span>${E(b)}</span></div>`).join("")}</div>${g.foot?`<p class="ig-foot">${E(g.foot)}</p>`:""}`; break;
+    case "cards": h = (g.caption?L(g.caption):"")+`<div class="ig-cards">${g.cards.map(([a,b],i)=>`<div>${g.numbered?`<em>${i+1}</em>`:""}<b>${E(a)}</b><span>${E(b)}</span></div>`).join("")}</div>`; break;
+    case "tiles": h = `<div class="ig-tiles">${g.tiles.map(([a,b])=>`<div><b>${E(a)}</b><span>${E(b)}</span></div>`).join("")}</div>${g.foot?`<p class="ig-foot">${E(g.foot)}</p>`:""}`; break;
+    case "dodont": h = `<div class="ig-dodont"><div class="do"><b>Do</b>${g.do.map(x=>`<p>✓ ${E(x)}</p>`).join("")}</div><div class="dont"><b>Don’t</b>${g.dont.map(x=>`<p>✗ ${E(x)}</p>`).join("")}</div></div>`; break;
+    case "flow": { const n=g.steps.length, cols = n<=5 ? n : Math.ceil(n/2);
+      h = `<ol class="ig-flow ${g.big?"big":""}" style="--cols:${cols}">${g.steps.map(([a,b],i)=>`<li class="${(i+1)%cols===0?"rowend":""}"><em>${i+1}</em><b>${E(a)}</b>${b?`<span>${E(b)}</span>`:""}</li>`).join("")}</ol>`; break; }
+    case "chain": h = `<div class="ig-chain">${g.nodes.map(([a,b])=>`<div><b>${E(a)}</b>${b?`<span>${E(b)}</span>`:""}</div>`).join('<i aria-hidden="true">→</i>')}</div>`; break;
+    case "bars": { const mx = Math.max(...g.rows.map(r=>r[1])); const sc = v => g.log ? 100*Math.log10(v*10)/Math.log10(mx*10) : 100*v/mx;
+      h = L(g.caption)+`<div class="ig-bars">${g.rows.map(([a,v,n])=>`<div class="ig-bar"><span>${E(a)}</span><i style="width:${sc(v)}%"></i><em>${v} ${g.unit}</em></div>`).join("")}</div>
+      <p class="ig-foot">${g.rows.map(r=>`${E(r[0])}: ${E(r[2])}`).join(" · ")}</p>`; break; }
+    case "terminal": h = `<div class="term-screen ig-term">${g.rows.map(([c,d])=>`<div><span class="g">C:\\&gt; ${E(c)}</span><span class="d"># ${E(d)}</span></div>`).join("")}</div>`; break;
+    case "checklist": h = `<div class="ig-check">${g.groups.map(([t,xs])=>`<div><b>${E(t)}</b>${xs.map(x=>`<p><span>✓</span>${E(x)}</p>`).join("")}</div>`).join("")}</div>`; break;
+    case "pairs": h = `<div class="ig-pairs"><div class="hd"><span>${E(g.left)}</span><span></span><span>${E(g.right)}</span></div>${g.rows.map(([a,b])=>`<div><span class="a">${E(a)}</span><i>→</i><span class="b">${E(b)}</span></div>`).join("")}</div>`; break;
+    case "tiers": h = `<div class="ig-tiers"><div class="stack-t">${g.rows.map(([a,b],i)=>`<div style="width:${55+i*15}%"><b>${E(a)}</b><span>${E(b)}</span></div>`).join("")}</div><p class="ig-side">${E(g.side)}</p></div>`; break;
+    case "compare": h = `<div class="ig-compare" style="--n:${g.cols.length}">${g.cols.map(([t,s,xs])=>`<div><b>${E(t)}</b><em>${E(s)}</em>${xs.map(x=>`<p>${E(x)}</p>`).join("")}</div>`).join("")}</div>${g.foot?`<p class="ig-foot">${E(g.foot)}</p>`:""}`; break;
+    case "cycle": { const n=g.steps.length; h = `<div class="ig-cycle">${g.steps.map((s,i)=>{ const a=-90+i*360/n, x=50+38*Math.cos(a*Math.PI/180), y=50+38*Math.sin(a*Math.PI/180); return `<div style="left:${x}%;top:${y}%"><em>${i+1}</em>${E(s)}</div>`; }).join("")}<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="38"/><path d="M50 12 l3 -2.5 M50 12 l3 2.5"/></svg><span class="hub">Client<br>feedback</span></div>`; break; }
+    case "record": h = `<div class="ig-record"><div class="hd">${E(g.title)}</div>${g.fields.map(([k,v])=>`<div><span>${E(k)}</span><b>${E(v)}</b></div>`).join("")}</div>`; break;
+    case "ip": h = `<div class="ig-ip"><div class="row-ip">${["192","168","1","20"].map((o,i)=>`<div class="${i<3?"net":"host"}"><b>${o}</b><span>${i<3?"network":"host"}</span></div>`).join('<i>.</i>')}</div>
+      <div class="row-ip mask">${["255","255","255","0"].map(o=>`<div><b>${o}</b></div>`).join('<i>.</i>')}</div>
+      <div class="ig-ipnotes"><p><b>Same network:</b> 192.168.1.<u>200</u></p><p><b>Different:</b> 192.168.<u>2</u>.20</p><p><b>Invalid:</b> 192.168.1.<u>300</u></p><p><b>No DHCP:</b> 169.254.x.x</p></div></div>`; break;
+    case "cvss": h = `<div class="ig-cvss"><div class="scale">${[["None","0","#8A93A6",1],["Low","0.1–3.9","#3E9A4B",39],["Medium","4.0–6.9","#D9A400",30],["High","7.0–8.9","#E06A1B",20],["Critical","9.0–10","#C42B1C",11]].map(([a,b,c,w])=>`<div style="flex:${w};background:${c}"><b>${a}</b><span>${b}</span></div>`).join("")}</div><p class="ig-foot">CVSS scores 0–10. Fix Critical and High first, then report to the required personnel.</p></div>`; break;
+    case "backup": { const rows=[["Full",["F","F","F","F","F"],"Fastest restore: just the latest full"],["Incremental",["F","I","I","I","I"],"Restore: full + every incremental since"],["Differential",["F","D","D","D","D"],"Restore: full + latest differential"]];
+      h = `<div class="ig-backup"><div class="bk-row hd"><span></span>${["Mon","Tue","Wed","Thu","Fri"].map(d=>`<span>${d}</span>`).join("")}</div>${rows.map(([n,c,r])=>`<div class="bk-row"><b>${n}</b>${c.map((x,i)=>`<span class="bk ${x}" style="--h:${x==="F"?100:x==="I"?28:20+i*20}%"><i></i>${x}</span>`).join("")}<p>${r}</p></div>`).join("")}
+      <p class="ig-foot">Bar height = how much data each night’s backup copies. 3-2-1 rule: 3 copies · 2 media · 1 off-site.</p></div>`; break; }
+    case "apps": { const a=["Open + transparent","Anonymity","Collect only what’s needed","Unsolicited info","Notify collection","Use + disclosure","Direct marketing","Cross-border","Gov identifiers","Quality","Security","Access","Correction"];
+      h = `<div class="ig-apps">${a.map((x,i)=>`<div class="${i===5||i===10?"hot":""}"><em>APP ${i+1}</em><span>${x}</span></div>`).join("")}</div><p class="ig-foot">Highlighted: the two APPs exam questions use most. Covers agencies and organisations with turnover over $3 million.</p>`; break; }
+  }
+  return `<figure class="ig"><figcaption class="label">At a glance</figcaption>${h}</figure>`;
+}
+
 /* ---------- helpers ---------- */
 const $ = (s, r=document) => r.querySelector(s);
 const $$ = (s, r=document) => [...r.querySelectorAll(s)];
@@ -1843,11 +2033,12 @@ function viewNotes(opts){
         <div class="nglinks">${g.pages.map(navLink).join("")}</div></div>`).join("")}
       <div class="ngroup"><button class="nghead ${pg.k==="gloss"?"cur":""}" data-np="notes-gloss"><span class="uic" style="--c:var(--band-muted)">${svgI("book")}</span><span class="ngl">Glossary<span class="ucode" style="--c:var(--band-muted)">${GLOSSARY.length} terms</span></span></button></div>`;
   app.innerHTML = `
-    <div class="nmain">
+    <div class="nmain" style="--c:${pg.u?`var(--u${pg.u})`:"var(--accent)"}">
       <label class="nselect"><span class="label">Jump to</span>
         <select id="nsel">${NOTE_GROUPS.map(g=>`<optgroup label="${g.u?UNITS[g.u].code+" · ":""}${g.label}">${g.pages.map(p=>`<option value="${p.id}" ${p.id===pg.id?"selected":""}>${esc(p.title)}</option>`).join("")}</optgroup>`).join("")}<option value="notes-gloss" ${pg.k==="gloss"?"selected":""}>Glossary</option></select></label>
       <div class="ncrumb">${pg.u?`${uchip(pg.u)}<span>${UNITS[pg.u].name}</span>`:`<span class="label">${pg.k==="gloss"?"Reference":"Exam technique"}</span>`}${group?`<span class="label">${group.pages.indexOf(pg)+1} of ${group.pages.length}</span>`:""}</div>
       <div class="nhead"><span class="ico" style="--ic:${pg.u?`var(--u${pg.u})`:"var(--accent)"}">${svgI(topicIcon(pg))}</span><h2>${esc(pg.title)}</h2></div>
+      ${renderIG(pg.id)}
       <div id="notesBody" class="nbody"></div>
       <div class="npager">
         ${prev?`<button class="btn" data-np="${prev.id}"><span class="label">Previous</span><br>${esc(prev.title)}</button>`:"<span></span>"}
